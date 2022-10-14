@@ -4,17 +4,6 @@
     <Authors>Petabridge, LLC</Authors>
     <VersionPrefix>0.1.0</VersionPrefix>
     <PackageReleaseNotes/>
-    <PackageIconUrl>
-      https://petabridge.com/images/logo.png
-    </PackageIconUrl>
-    <PackageProjectUrl>
-      https://github.com/petabridge/docker-splitter
-    </PackageProjectUrl>
-    <PackageLicenseUrl>
-      https://github.com/petabridge/docker-splitter/blob/afe51631dc6f4c8eee7b239161352c3a900f06a4/LICENSE
-    </PackageLicenseUrl>
-    <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   
   <PropertyGroup>

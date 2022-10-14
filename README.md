@@ -1,8 +1,8 @@
-# ClusterSplitter
-ClusterSplitter - Induce a split-brain condition in a cluster created using docker-compose
+# docker-split
+docker-split - Induce a split-brain condition in a cluster created using docker-compose
 
 ## SYNOPSIS
-`ClusterSplitter CLUSTER NETWORK COMMAND`
+`docker-split CLUSTER NETWORK COMMAND`
 
 ## DESCRIPTION
 Create a split-brain condition in the `CLUSTER` docker cluster inside the `NETWORK` docker network.
@@ -12,12 +12,17 @@ This tool assumes that the docker container names would be in the form of `"{CLU
 COMMAND is a string in the form of
 
 ```
-<int> [FROM <int> [<int>]...] [AND <int> [FROM] <int> [<int>]...]...
+<int> [<int>]...] [FROM <int> [<int>]...]
 ```
 
 - `<int>` is the docker container name `NUMBER` in the `"{CLUSTER}-{NUMBER}"` pattern.
 - If `FROM` is not omitted, then the listed node(s) will be split from the list of nodes in the `FROM` section.
 - If `FROM` is omitted, then the listed node(s) will be split from the rest of the nodes in the cluster.
+
+You can chain multiple COMMAND by using AND, example:
+```text
+1 3 FROM 2 AND 2 FROM 4 AND 3
+```
 
 ## EXAMPLE
 
