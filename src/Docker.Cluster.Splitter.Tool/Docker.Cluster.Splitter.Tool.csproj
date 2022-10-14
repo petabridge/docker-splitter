@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <ToolCommandName>docker-split</ToolCommandName>
+        <PackAsTool>true</PackAsTool>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>petabridge.png</PackageIcon>
+        <PackageProjectUrl>
+            https://github.com/petabridge/docker-splitter
+        </PackageProjectUrl>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        
+        <OutputType>Exe</OutputType>
+        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+        <Description>CLI tool for creating network splits in Docker networks in order to test fault-tolerance.</Description>
+        
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        
+        <RootNamespace>Docker.Cluster.Splitter.Tool</RootNamespace>
+        <AssemblyName>DockerSplit</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Docker.DotNet" Version="3.125.12" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="../../docs/images/petabridge.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+</Project>
